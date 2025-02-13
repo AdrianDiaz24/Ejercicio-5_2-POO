@@ -20,7 +20,3 @@ class Departamento(val nombre: String) {
     }
 
 }
-
-fun Double.rendondear(): Double {
-    return this.toBigDecimal().setScale(2, RoundingMode.HALF_UP).toDouble()
-}

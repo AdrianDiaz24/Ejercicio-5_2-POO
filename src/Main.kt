@@ -1,3 +1,4 @@
+import java.math.RoundingMode
 
 
 fun main(){
@@ -12,4 +13,8 @@ fun main(){
     println("Salario total del departamento ${departamento1.nombre} es de ${departamento1.calcularSalarioTotal()}€")
 
 
+}
+
+fun Double.rendondear(): Double {
+    return this.toBigDecimal().setScale(2, RoundingMode.HALF_UP).toDouble()
 }
