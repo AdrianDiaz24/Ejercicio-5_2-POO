@@ -16,7 +16,11 @@ class Departamento(val nombre: String) {
         for (empleado in empleados){
             salarioTotal += empleado.calcularSalario()
         }
-        return salarioTotal.toBigDecimal().setScale(2,RoundingMode.HALF_UP).toDouble()
+        return salarioTotal.rendondear()
     }
 
+}
+
+fun Double.rendondear(): Double {
+    return this.toBigDecimal().setScale(2, RoundingMode.HALF_UP).toDouble()
 }
