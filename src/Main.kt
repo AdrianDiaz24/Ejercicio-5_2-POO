@@ -15,6 +15,6 @@ fun main(){
 
 }
 
-fun Double.rendondear(): Double {
-    return this.toBigDecimal().setScale(2, RoundingMode.HALF_UP).toDouble()
+fun Double.rendondear(posDecimales: Int = 2): Double {
+    return this.toBigDecimal().setScale(posDecimales, RoundingMode.HALF_UP).toDouble()
 }
